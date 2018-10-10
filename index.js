@@ -99,6 +99,7 @@ function dupe(selector){
     const element = document.querySelector(selector);
     //const new_element = document.createElement("p");
     const new_element = element.cloneNode(true);
+    new_element.removeAttribute("id");
     //new_element.textContent = element.textContent;
     element.parentNode.appendChild(new_element);
     console.log(element.childNodes, new_element.childNodes);
