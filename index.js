@@ -101,6 +101,9 @@ function dupe(selector){
     const new_element = element.cloneNode(true);
     new_element.removeAttribute("id");
     //new_element.textContent = element.textContent;
+
+    console.log(element.innerHTML, new_element.innerHTML);
+
     element.parentNode.appendChild(new_element);
     console.log(element.childNodes, new_element.childNodes);
     console.log(element.hasChildNodes(), new_element.hasChildNodes());

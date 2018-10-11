@@ -519,9 +519,8 @@ QUnit.test("duplication",
             "The two paragraphs should have the same text."
         );
 
-        assert.notEqual(
-            paras[0].id,
-            paras[1].id,
+        assert.ok(
+            (paras[0].id == null && paras[1].id == null) || paras[0].id !== paras[1].id,
             "It is never a good idea to have the same ID for elements. " +
             "If you need to duplicate IDs then it is best to use classes instead"
         );
